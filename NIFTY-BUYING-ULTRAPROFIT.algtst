@@ -1,0 +1,168 @@
+{
+  "version": "0.6",
+  "name": "Unsaved Strategy",
+  "strategy": {
+    "Ticker": "NIFTY",
+    "TakeUnderlyingFromCashOrNot": "True",
+    "TrailSLtoBreakeven": "False",
+    "SquareOffAllLegs": "False",
+    "EntryIndicators": {
+      "Type": "IndicatorTreeNodeType.OperandNode",
+      "OperandType": "OperandType.And",
+      "Value": [
+        {
+          "Type": "IndicatorTreeNodeType.DataNode",
+          "Value": {
+            "IndicatorName": "IndicatorType.TimeIndicator",
+            "Parameters": {
+              "Hour": 9,
+              "Minute": 16
+            }
+          }
+        },
+        {
+          "Type": "IndicatorTreeNodeType.DataNode",
+          "Value": {
+            "IndicatorName": "IndicatorType.PositionalIndicator",
+            "Parameters": {
+              "IsWeekly": "True",
+              "BeforeDays": 4
+            }
+          }
+        }
+      ]
+    },
+    "ExitIndicators": {
+      "Type": "IndicatorTreeNodeType.OperandNode",
+      "OperandType": "OperandType.And",
+      "Value": [
+        {
+          "Type": "IndicatorTreeNodeType.DataNode",
+          "Value": {
+            "IndicatorName": "IndicatorType.TimeIndicator",
+            "Parameters": {
+              "Hour": 12,
+              "Minute": 15
+            }
+          }
+        },
+        {
+          "Type": "IndicatorTreeNodeType.DataNode",
+          "Value": {
+            "IndicatorName": "IndicatorType.PositionalIndicator",
+            "Parameters": {
+              "IsWeekly": "True",
+              "BeforeDays": 1
+            }
+          }
+        }
+      ]
+    },
+    "StrategyType": "StrategyType.IntradaySameDay",
+    "MaxPositionInADay": 1,
+    "ReentryTimeRestriction": "None",
+    "SkipInitialCandles": 0,
+    "ListOfLegConfigs": [
+      {
+        "PositionType": "PositionType.Sell",
+        "Lots": 1,
+        "LegStopLoss": {
+          "Type": "None",
+          "Value": 0
+        },
+        "LegTarget": {
+          "Type": "None",
+          "Value": 0
+        },
+        "LegTrailSL": {
+          "Type": "None",
+          "Value": {}
+        },
+        "LegMomentum": {
+          "Type": "None",
+          "Value": 0
+        },
+        "ExpiryKind": "ExpiryType.Weekly",
+        "EntryType": "EntryType.EntryByStrikeType",
+        "StrikeParameter": "StrikeType.OTM1",
+        "InstrumentKind": "LegType.CE",
+        "LegReentrySL": {
+          "Type": "None",
+          "Value": {}
+        },
+        "LegReentryTP": {
+          "Type": "None",
+          "Value": {}
+        },
+        "id": "kosyktpe"
+      },
+      {
+        "PositionType": "PositionType.Sell",
+        "Lots": 1,
+        "LegStopLoss": {
+          "Type": "None",
+          "Value": 0
+        },
+        "LegTarget": {
+          "Type": "None",
+          "Value": 0
+        },
+        "LegTrailSL": {
+          "Type": "None",
+          "Value": {}
+        },
+        "LegMomentum": {
+          "Type": "None",
+          "Value": 0
+        },
+        "ExpiryKind": "ExpiryType.Weekly",
+        "EntryType": "EntryType.EntryByStrikeType",
+        "StrikeParameter": "StrikeType.OTM1",
+        "InstrumentKind": "LegType.PE",
+        "LegReentrySL": {
+          "Type": "None",
+          "Value": {}
+        },
+        "LegReentryTP": {
+          "Type": "None",
+          "Value": {}
+        },
+        "id": "l40tpd8p"
+      }
+    ],
+    "IdleLegConfigs": {},
+    "OverallMomentum": {
+      "Type": "None",
+      "Value": 0
+    },
+    "OverallSL": {
+      "Type": "None",
+      "Value": 0
+    },
+    "OverallTgt": {
+      "Type": "None",
+      "Value": 0
+    },
+    "OverallReentrySL": {
+      "Type": "None",
+      "Value": {}
+    },
+    "OverallReentryTgt": {
+      "Type": "None",
+      "Value": {}
+    },
+    "OverallTrailSL": {
+      "Type": "None",
+      "Value": {}
+    },
+    "LockAndTrail": {
+      "Type": "None",
+      "Value": {}
+    },
+    "WeeklyOldRegime": true
+  },
+  "attributes": {
+    "template": "Straddle920",
+    "positional": "Positional.Weekly"
+  }
+}
