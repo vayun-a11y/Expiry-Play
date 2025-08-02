@@ -1,0 +1,1 @@
+THis strategy involves selling two different options, a Call and a Put, on the NIFTY index. The options have a weekly expiry. The entry time for the strategy is 9:16 AM, and the exit time is either 12:30 PM
